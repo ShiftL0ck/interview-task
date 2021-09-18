@@ -1,0 +1,255 @@
+@font-face {
+    font-family: 'Rounded Mplus 1c';
+    src: url('./fonts/RoundedMplus1c-Bold.woff2') format('woff2'),
+        url('./fonts/RoundedMplus1c-Bold.woff') format('woff');
+    font-weight: 750;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rounded Mplus 1c';
+    src: url('./fonts/RoundedMplus1c-Light.woff2') format('woff2'),
+        url('./fonts/RoundedMplus1c-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+.tile-catalog {
+    font-family: 'Rounded Mplus 1c';
+    display: flex;
+    list-style-type: none;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 0;
+    padding: 0;
+    font-size: 1.2rem;
+}
+
+.tile-catalog-element {
+    width: 300px;
+    margin: 1em 0.85em;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+}
+
+.tile-catalog-element__name {
+    max-width: 100%;
+    font-size: 1em;
+    overflow-wrap: break-word;
+    margin: 1em 0 0 0;
+}
+
+.tile-catalog-element__price {
+    font-weight: 700;
+    font-size: 1.4em;
+    margin: 1em 0 0 0;
+}
+
+.tile-catalog-element__image {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.tile-catalog-element__button {
+    font-family: 'Rounded Mplus 1c';
+    margin: 1.25em 0 0 0;
+    border: 1px solid rgba(0,0,0,.1);
+    background: #f13c6e linear-gradient(hsla(0,0%,100%,.25), transparent);
+    border-radius: 5vh;
+    cursor: pointer;
+    height: 2.5em;
+    font-weight: 700;
+    width: 100%;
+    font-size: 1em;
+    user-select: none;
+    will-change: background-color;
+    transition: all 2s cubic-bezier(.32,.09,0,.9);
+    transform: scale(1);
+}
+.tile-catalog-element__button:hover {
+    transform: scale(1.05);
+    animation: sparkle-play 2.6s cubic-bezier(.26,.39,.11,.69);
+    animation-fill-mode: forwards;
+}
+
+@keyframes sparkle-play {
+    25% {
+      background-color: #ff008098;
+    }
+    to {
+        background-color: #c22d84;
+    }
+}
+
+.order-form {
+    flex-direction: column;
+    font-size: 1.2em;
+    font-weight: 100;
+    align-content: space-around;
+    justify-content: center;
+    align-items: center;
+}
+
+.order-form__input-field {
+    text-align: center;
+    margin: 1.5em 0 0 0;
+    font-size: 0.75em;
+}
+
+.order-form__goods-header {
+    font-weight: inherit;
+}
+
+.order-form__input-description {
+    font-weight: inherit;
+    margin: 1.5em 0 0 0;
+}
+
+.order-form__general-instructions {
+    margin: 1.5em 0 0 0;
+    font-size: 1.35em;
+    font-weight: 700;
+}
+
+.order-form__good-name {
+    font-size: 1.25em;
+    border: none;
+    margin: 1.5em 0 0 0;
+    text-align: center;
+    font-style: italic;
+}
+
+.order-form__goods-header {
+    margin: 0;
+    font-size: 2em;
+}
+
+.order-form__button {
+    margin: 1.5em 0 0 0;
+    font-size: 1.35em;
+    border: none;
+    border-radius: 2em;
+    height: 2em;
+    transition: all 1s cubic-bezier(.32,.09,0,.9);
+    transform: scale(1);
+}
+
+.order-form__button-submit {
+    background: #8cf7b2 linear-gradient(hsla(0,0%,100%,.25), transparent);
+}
+.order-form__button-cancel {
+    background: #d3698c linear-gradient(hsla(0,0%,100%,.25), transparent);
+}
+
+.order-form__button-cancel:hover {
+    transform: scale(0.96);
+}
+.order-form__button-submit:hover {
+    transform: scale(0.96);
+}
+
+.pop-up {
+    background: hsla(360, 100%, 100%, 0.00);
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+@media (max-width: 400px) {
+    .pop-up {
+        align-items: flex-start;
+        justify-content: flex-start;
+        margin-top: 2vh;
+    }
+}
+
+.article {
+    font-family: 'Rounded Mplus 1c';
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding: 1.75em;
+    max-width: 1350px;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 410px;
+}
+@media (max-width: 650px) {
+    .article {
+        font-size: 13.5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .article {
+        padding: 0.5em;
+    }
+}
+
+.article__paragraph {
+    font-size: 1.65em;
+    margin: 1em 0 1em;
+}
+
+.order-form__frame {
+    display: flex;
+    max-width: 530px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin: 2rem;
+    border: 2px solid;
+    border-radius: 1em;
+    background: white;
+    padding: 2rem;
+}
+
+.ordered-list {
+    font-size: 1.65em;
+}
+
+.unordered-list {
+    font-size: 1.65em;
+}
+
+.article__image_rectangle {
+    max-width: 90vw;
+    max-height: 70vh;
+    padding: 2em;
+    min-width: 410px;
+}
+
+.article__title {
+    margin-right: auto;
+    font-size: 5em;
+    margin: 0.75em auto 0 0.5rem;
+}
+
+.article__subtitle {
+    margin-right: auto;
+    font-size: 3.5em;
+    margin: 0.75em auto 0 0.5rem;
+}
+
+.article__emphasis_strong {
+    font-size: 1.9em;
+    box-sizing: border-box;
+    width: 100%;
+    border: 1em double #ae3c22;
+    padding: 4rem;
+    text-align: center;
+    font-weight: 700;
+    border-radius: 2em;
+}
+
+.display-none {
+    display: none;
+}
